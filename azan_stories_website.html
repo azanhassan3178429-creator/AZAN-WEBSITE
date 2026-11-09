@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ur">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AZAN Stories</title>
+<style>
+:root{--gold:#e8bd55;--bg:#090909;--panel:#151515;--muted:#b9b1a0}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#f7f2e8;font-family:Arial,sans-serif}
+header{padding:28px 7%;background:linear-gradient(120deg,#050505,#211805);border-bottom:1px solid #5d471c}
+.brand{color:var(--gold);font-size:28px;font-weight:800;letter-spacing:2px}
+nav{margin-top:16px;display:flex;gap:20px;flex-wrap:wrap}
+nav a{color:#eee2c4;text-decoration:none;font-size:14px}
+.hero{padding:72px 7% 60px;background:radial-gradient(ellipse at 80% 20%,#49340d 0%,#171108 25%,#090909 68%)}
+.tag{color:var(--gold);text-transform:uppercase;letter-spacing:3px;font-size:12px}
+h1{font-size:clamp(38px,7vw,68px);line-height:1.05;margin:16px 0}
+h1 span{color:var(--gold)}
+.hero p{max-width:620px;color:var(--muted);font-size:17px;line-height:1.7}
+.btn{display:inline-block;margin-top:18px;padding:13px 22px;border-radius:5px;background:var(--gold);color:#171006;text-decoration:none;font-weight:bold}
+section{padding:42px 7%}
+.section-title{color:var(--gold);font-size:26px;margin:0 0 22px}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:var(--panel);border:1px solid #403116;border-radius:10px;overflow:hidden}
+.thumb{height:135px;background:linear-gradient(135deg,#30220b,#090909);display:grid;place-items:center;color:var(--gold);font-size:42px}
+.card-content{padding:18px}
+.card h3{margin:0 0 9px;color:#f3d58d}
+.card p{color:var(--muted);line-height:1.55;font-size:14px}
+.card a{color:var(--gold);text-decoration:none;font-weight:bold}
+.about{background:#111;border-top:1px solid #322714;border-bottom:1px solid #322714}
+footer{text-align:center;padding:25px;color:#9d927e;font-size:13px}
+.small{color:#a99e89;font-size:13px}
+</style>
+</head>
+<body>
+<header>
+  <div class="brand">AZAN STORIES</div>
+  <nav>
+    <a href="#home">Home</a><a href="#stories">Stories</a><a href="#about">About</a><a href="#youtube">YouTube</a>
+  </nav>
+</header>
+<main>
+  <div class="hero" id="home">
+    <div class="tag">Welcome to my story world</div>
+    <h1>Stories that<br><span>spark imagination.</span></h1>
+    <p>Funny adventures, amazing characters aur dilchasp kahaniyan — sab ek hi jagah. Nayi stories ke liye yahan aate raho!</p>
+    <a class="btn" href="#stories">Explore Stories</a>
+  </div>
+  <section id="stories">
+    <h2 class="section-title">Featured Stories</h2>
+    <div class="cards">
+      <article class="card"><div class="thumb">🎬</div><div class="card-content"><h3>Hassan Ki Mazedaar Adventure</h3><p>Hassan ki ek funny aur exciting adventure story. Yahan apni video ka link lagao.</p><a href="#" onclick="alert('Yahan apni YouTube video ka link add karo.');return false;">Watch Story →</a></div></article>
+      <article class="card"><div class="thumb">🌙</div><div class="card-content"><h3>Ek Nayi Raat, Naya Raaz</h3><p>Suspense aur imagination se bhari kahani. Is jagah apni doosri story add karo.</p><a href="#" onclick="alert('Yahan apni YouTube video ka link add karo.');return false;">Watch Story →</a></div></article>
+      <article class="card"><div class="thumb">😂</div><div class="card-content"><h3>Funny Cartoon Duniya</h3><p>Hansi, masti aur interesting characters wali story collection.</p><a href="#" onclick="alert('Yahan apni YouTube video ka link add karo.');return false;">Watch Story →</a></div></article>
+    </div>
+    <p class="small">Tip: Apni videos ke asli YouTube links lagane ke liye neeche diye gaye steps follow karo.</p>
+  </section>
+  <section class="about" id="about">
+    <h2 class="section-title">About This Website</h2>
+    <p style="max-width:700px;color:#c9c0af;line-height:1.8">Welcome to AZAN STORIES! Yeh website meri YouTube stories, animated adventures aur creative videos ko ek jagah share karne ke liye banayi gayi hai.</p>
+  </section>
+  <section id="youtube">
+    <h2 class="section-title">Visit My YouTube Channel</h2>
+    <p style="color:#c9c0af">Apne channel ka link yahan add karo.</p>
+    <a class="btn" href="#" onclick="alert('Is button mein apne YouTube channel ka URL lagao.');return false;">Open YouTube Channel</a>
+  </section>
+</main>
+<footer>© 2026 AZAN STORIES · Made with creativity</footer>
+</body>
+</html>
