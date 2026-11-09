@@ -1,37 +1,194 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>AZAN-WEBSITE</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AZAN-OFFICIAL | Hassan Stories</title>
+
 <style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   background: #080808;
   color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  padding: 25px 8%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #b38b32;
+}
+
+.logo {
+  color: #e7bd55;
+  font-size: 27px;
+  font-weight: bold;
+  text-shadow: 0 0 15px #c99b35;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin-left: 20px;
+}
+
+.hero {
+  min-height: 480px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
-  font-family: Arial;
-  padding-top: 100px;
+  padding: 30px 15px;
+  background: radial-gradient(circle, #30230b, #080808 65%);
 }
-h1 {
-  color: #00eaff;
-  font-size: 50px;
+
+.hero h1 {
+  font-size: clamp(38px, 7vw, 65px);
+  color: #f1c75b;
+  text-shadow: 0 0 25px #bd8b25;
+  animation: glow 2s infinite alternate;
 }
-button {
-  background: #00eaff;
-  padding: 15px 30px;
-  border: none;
-  border-radius: 10px;
+
+.hero p {
+  margin: 20px;
+  color: #ddd;
   font-size: 18px;
+}
+
+.gold-btn {
+  background: linear-gradient(45deg, #a87518, #ffe18a);
+  color: black;
+  padding: 14px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 15px;
+  display: inline-block;
+}
+
+section {
+  padding: 65px 8%;
+  text-align: center;
+}
+
+section h2 {
+  color: #eac45e;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.stories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+}
+
+.story {
+  background: #171717;
+  border: 1px solid #9d762d;
+  border-radius: 15px;
+  padding: 25px;
+  transition: 0.3s;
+}
+
+.story:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 0 20px #b68b35;
+}
+
+.story h3 {
+  color: #edc65d;
+  margin: 15px;
+}
+
+.story p {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+footer {
+  border-top: 1px solid #9d762d;
+  padding: 25px;
+  text-align: center;
+  color: #d9b65d;
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 8px #b68b35; }
+  to { text-shadow: 0 0 30px #ffd76b; }
+}
+
+@media(max-width:600px) {
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+  nav a {
+    margin: 8px;
+  }
 }
 </style>
 </head>
+
 <body>
 
-<h1>AZAN OFFICIAL</h1>
-<h2>Welcome To My Website</h2>
-<p>This Is My First Website!</p>
+<header>
+  <div class="logo">👑 AZAN-OFFICIAL</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#stories">Stories</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
 
-<button onclick="alert('Welcome Boss Azan!')">
-CLICK HERE
-</button>
+<div class="hero" id="home">
+  <h1>WELCOME TO AZAN-OFFICIAL</h1>
+  <p>Discover Amazing Hassan Stories!</p>
+  <a href="#stories" class="gold-btn">EXPLORE STORIES</a>
+</div>
+
+<section id="stories">
+  <h2>🎬 HASSAN STORIES</h2>
+
+  <div class="stories">
+
+    <div class="story">
+      <h3>🌟 Hassan's Adventure</h3>
+      <p>Watch amazing and exciting adventures of Hassan.</p>
+      <a href="#about" class="gold-btn">Watch Video</a>
+    </div>
+
+    <div class="story">
+      <h3>😂 Funny Stories</h3>
+      <p>Enjoy funny moments and entertaining stories.</p>
+      <a href="#about" class="gold-btn">Watch Video</a>
+    </div>
+
+    <div class="story">
+      <h3>🌙 Islamic Stories</h3>
+      <p>Learn beautiful lessons through Islamic stories.</p>
+      <a href="#about" class="gold-btn">Watch Video</a>
+    </div>
+
+  </div>
+</section>
+
+<section id="about">
+  <h2>ABOUT AZAN-OFFICIAL</h2>
+  <p>Welcome to my official website. Enjoy stories, adventures and entertainment!</p>
+</section>
+
+<footer>
+  © 2026 AZAN-OFFICIAL | All Rights Reserved
+</footer>
 
 </body>
 </html>
