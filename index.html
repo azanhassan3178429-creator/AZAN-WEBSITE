@@ -3,136 +3,364 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AZAN OFFICIAL</title>
+<title>SHAIKH SAHAB | Official Website</title>
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  scroll-behavior:smooth;
 }
 
-body {
-  background: #080808;
-  color: white;
-  font-family: Arial, sans-serif;
+:root{
+  --gold:#e8b94f;
+  --light:#ffe6a0;
+  --dark:#080705;
 }
 
-header {
-  padding: 25px 8%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-bottom: 1px solid #b38b32;
+body{
+  background:var(--dark);
+  color:white;
+  font-family:Georgia,serif;
 }
 
-.logo {
-  color: #e7bd55;
-  font-size: 27px;
-  font-weight: bold;
-  text-shadow: 0 0 15px #c99b35;
+/* INTRO */
+#intro{
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  background:radial-gradient(circle,#392609,#050505 75%);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+  transition:opacity .8s,visibility .8s;
 }
 
-nav a {
-  color: white;
-  text-decoration: none;
-  margin-left: 20px;
+#intro.hide{
+  opacity:0;
+  visibility:hidden;
 }
 
-.hero {
-  min-height: 480px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding: 30px 15px;
-  background: radial-gradient(circle, #30230b, #080808 65%);
+#intro h1{
+  color:var(--gold);
+  font-size:clamp(35px,7vw,70px);
+  text-shadow:0 0 30px #d89b25;
+  animation:glow 2s infinite alternate;
 }
 
-.hero h1 {
-  font-size: clamp(38px, 7vw, 65px);
-  color: #f1c75b;
-  text-shadow: 0 0 25px #bd8b25;
-  animation: glow 2s infinite alternate;
+#intro p{
+  color:#fff0c5;
+  margin:20px;
+  letter-spacing:4px;
 }
 
-.hero p {
-  margin: 20px;
-  color: #ddd;
-  font-size: 18px;
+.enter{
+  padding:14px 35px;
+  background:linear-gradient(45deg,#a87518,#ffe7a0);
+  border:0;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
 }
 
-.gold-btn {
-  background: linear-gradient(45deg, #a87518, #ffe18a);
-  color: black;
-  padding: 14px 30px;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 15px;
-  display: inline-block;
+/* HEADER */
+header{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(5,5,5,.96);
+  border-bottom:1px solid var(--gold);
+  padding:20px 7%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  flex-wrap:wrap;
+  gap:15px;
 }
 
-section {
-  padding: 65px 8%;
-  text-align: center;
+.logo{
+  color:var(--gold);
+  font-size:27px;
+  font-weight:bold;
+  text-shadow:0 0 15px #bd8724;
 }
 
-section h2 {
-  color: #eac45e;
-  font-size: 32px;
-  margin-bottom: 30px;
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:20px;
 }
 
-.stories {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 25px;
+nav a{
+  color:#eee;
+  text-decoration:none;
+  transition:.3s;
 }
 
-.story {
-  background: #171717;
-  border: 1px solid #9d762d;
-  border-radius: 15px;
-  padding: 25px;
-  transition: 0.3s;
+nav a:hover{
+  color:var(--gold);
+  text-shadow:0 0 12px var(--gold);
 }
 
-.story:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 0 20px #b68b35;
+/* HERO */
+.hero{
+  min-height:570px;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:70px 20px;
+  background:
+  radial-gradient(ellipse at center,#50370e 0%,#1b1206 35%,#050505 80%);
+  border-bottom:1px solid #9b7024;
+  position:relative;
+  overflow:hidden;
 }
 
-.story h3 {
-  color: #edc65d;
-  margin: 15px;
+.crown{
+  font-size:65px;
+  color:var(--gold);
+  filter:drop-shadow(0 0 15px #e5a92b);
 }
 
-.story p {
-  color: #ccc;
-  line-height: 1.6;
+.hero h1{
+  font-size:clamp(42px,8vw,85px);
+  color:var(--gold);
+  text-shadow:0 0 25px #c58b20;
+  animation:glow 2s infinite alternate;
 }
 
-footer {
-  border-top: 1px solid #9d762d;
-  padding: 25px;
-  text-align: center;
-  color: #d9b65d;
+.hero h2{
+  color:#fff0c5;
+  font-size:20px;
+  letter-spacing:5px;
+  margin-top:20px;
 }
 
-@keyframes glow {
-  from { text-shadow: 0 0 8px #b68b35; }
-  to { text-shadow: 0 0 30px #ffd76b; }
+.hero p{
+  color:#d7c8a8;
+  margin:25px 0;
+  font-size:17px;
 }
 
-@media(max-width:600px) {
-  header {
-    flex-direction: column;
-    gap: 15px;
+.gold-btn{
+  display:inline-block;
+  padding:14px 32px;
+  border:1px solid var(--gold);
+  border-radius:35px;
+  background:linear-gradient(45deg,#9d6914,#ffe49a);
+  color:#100c04;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.gold-btn:hover{
+  transform:scale(1.07);
+  box-shadow:0 0 25px #d9a63a;
+}
+
+/* SECTION */
+section{
+  padding:75px 7%;
+  text-align:center;
+}
+
+.section-title{
+  color:var(--gold);
+  font-size:clamp(27px,4vw,38px);
+  margin-bottom:15px;
+  text-shadow:0 0 15px #93651c;
+}
+
+.section-subtitle{
+  color:#bdb3a0;
+  margin-bottom:40px;
+}
+
+/* 9 BOXES */
+.boxes{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+}
+
+.box{
+  background:linear-gradient(145deg,#21190c,#090806);
+  border:1px solid #a47a2b;
+  border-radius:17px;
+  padding:35px 20px;
+  min-height:230px;
+  transition:.4s;
+  box-shadow:0 5px 20px #000;
+}
+
+.box:hover{
+  transform:translateY(-10px);
+  border-color:#ffe18a;
+  box-shadow:0 0 25px #93651c;
+}
+
+.box .symbol{
+  font-size:43px;
+  margin-bottom:18px;
+  color:var(--gold);
+}
+
+.box h3{
+  color:#f0c75c;
+  font-size:22px;
+  margin-bottom:12px;
+}
+
+.box p{
+  color:#c9c1b1;
+  line-height:1.6;
+  font-size:14px;
+}
+
+.box a{
+  display:inline-block;
+  margin-top:18px;
+  color:#ffe09a;
+  border:1px solid #a77b28;
+  padding:9px 20px;
+  border-radius:25px;
+  text-decoration:none;
+}
+
+.box a:hover{
+  background:#d7a537;
+  color:black;
+}
+
+/* OTHER SECTIONS */
+.content-area{
+  background:linear-gradient(180deg,#100d07,#050505);
+  border-top:1px solid #493516;
+  border-bottom:1px solid #493516;
+}
+
+.about-text{
+  max-width:750px;
+  margin:auto;
+  line-height:2;
+  color:#d3c8b1;
+  font-size:17px;
+}
+
+.gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:20px;
+}
+
+.gallery-item{
+  height:170px;
+  border:1px solid #a47a2b;
+  border-radius:15px;
+  background:radial-gradient(circle,#38270d,#0a0906);
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:45px;
+  transition:.3s;
+}
+
+.gallery-item:hover{
+  box-shadow:0 0 20px #bd8c32;
+  transform:scale(1.03);
+}
+
+/* CONTACT */
+.contact-card{
+  max-width:650px;
+  margin:auto;
+  padding:35px;
+  border:1px solid #a47a2b;
+  border-radius:18px;
+  background:#151109;
+}
+
+.contact-card p{
+  color:#d2c5a8;
+  line-height:2;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:40px 15px 25px;
+  border-top:2px solid #a47a2b;
+  background:#050505;
+}
+
+.footer-name{
+  font-size:27px;
+  color:var(--gold);
+  font-weight:bold;
+  text-shadow:0 0 15px #b98a2d;
+}
+
+.created{
+  margin-top:25px;
+  color:#ffe09a;
+  font-size:20px;
+  letter-spacing:2px;
+}
+
+footer p{
+  color:#998b6d;
+  margin-top:15px;
+  font-size:13px;
+}
+
+/* ANIMATION */
+@keyframes glow{
+  from{ text-shadow:0 0 8px #a87920; }
+  to{ text-shadow:0 0 30px #ffe18a; }
+}
+
+/* MOBILE */
+@media(max-width:750px){
+  header{
+    justify-content:center;
+    text-align:center;
   }
-  nav a {
-    margin: 8px;
+
+  nav{
+    justify-content:center;
+    gap:13px;
+  }
+
+  .boxes{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:480px){
+  .boxes{
+    grid-template-columns:1fr;
+  }
+
+  .gallery-grid{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .box{
+    min-height:190px;
+  }
+
+  .hero{
+    min-height:470px;
   }
 }
 </style>
@@ -140,70 +368,217 @@ footer {
 
 <body>
 
+<!-- INTRO -->
+<div id="intro">
+  <div class="crown">♛</div>
+  <h1>SHAIKH SAHAB</h1>
+  <p>WELCOME TO OUR OFFICIAL WEBSITE</p>
+  <button class="enter" onclick="enterSite()">ENTER WEBSITE</button>
+</div>
+
+<!-- HEADER -->
 <header>
-  <div class="logo">👑 AZAN-OFFICIAL</div>
+  <div class="logo">♛ SHAIKH SAHAB</div>
+
   <nav>
     <a href="#home">Home</a>
-    <a href="#stories">Stories</a>
+    <a href="#boxes">Explore</a>
     <a href="#about">About</a>
+    <a href="#videos">Videos</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <div class="hero" id="home">
-  <h1>WELCOME TO AZAN-OFFICIAL</h1>
-  <p>Discover Amazing Hassan Stories!</p>
-  <a href="#stories" class="gold-btn">EXPLORE STORIES</a>
+  <div class="crown">♛</div>
+  <h1>SHAIKH SAHAB</h1>
+  <h2>WELCOME TO MY OFFICIAL WEBSITE</h2>
+  <p>Dream Big • Stay Blessed • Keep Growing</p>
+  <a href="#boxes" class="gold-btn">EXPLORE NOW →</a>
 </div>
 
-<section id="stories">
-  <h2>🎬 HASSAN STORIES</h2>
+<!-- NINE BOXES -->
+<section id="boxes">
+  <h2 class="section-title">✦ EXPLORE SHAikh SAHAB ✦</h2>
+  <p class="section-subtitle">Discover Something Special</p>
 
-  <div class="stories"
-   <div class="stories">
-  <h3>Hassan's First Video</h3>
-  <iframe
-    width="100%"
-    height="200"
-  
-    title="Hassan Story"
-    allowfullscreen>
-  </iframe>
-<div class="story">
-  <h3>🌟 Hassan's Adventure</h3>
-  <p>Watch amazing and exciting adventures of Hassan.</p>
+  <div class="boxes">
 
-  <iframe
-    width="100%"
-    height="315"
-    src="https://www.youtube.com/embed/vemtUX66qY8"
-    title="Hassan's Adventure"
-    allowfullscreen>
-  </iframe>
-</div>
-
-    <div class="story">
-      <h3>😂 Funny Stories</h3>
-      <p>Enjoy funny moments and entertaining stories.</p>
-       <a href="https://www.youtube.com/watch?v=qXqrfd1QJU0" class="gold-btn" target="_blank">Watch Video</a>
+    <div class="box">
+      <div class="symbol">☪</div>
+      <h3>Islamic Stories</h3>
+      <p>Beautiful Islamic stories and lessons.</p>
+      <a href="#stories">Explore →</a>
     </div>
 
-    <div class="story">
-      <h3>🌙 Islamic Stories</h3>
-      <p>Learn beautiful lessons through Islamic stories.</p>
-     <a href="https://www.youtube.com/watch?v=uYfsosX4xVY" class="gold-btn" target="_blank">Watch Video</a>
+    <div class="box">
+      <div class="symbol">▶</div>
+      <h3>Funny Stories</h3>
+      <p>Enjoy entertaining and funny stories.</p>
+      <a href="#videos">Watch Now →</a>
+    </div>
+
+    <div class="box">
+      <div class="symbol">♛</div>
+      <h3>About Us</h3>
+      <p>Learn more about Shaikh Sahab.</p>
+      <a href="#about">Discover →</a>
+    </div>
+
+    <div class="box">
+      <div class="symbol">🎬</div>
+      <h3>Videos</h3>
+      <p>Explore our video collection.</p>
+      <a href="#videos">View Videos →</a>
+    </div>
+
+    <div class="box">
+      <div class="symbol">▧</div>
+      <h3>Gallery</h3>
+      <p>Explore our special gallery.</p>
+      <a href="#gallery">View Gallery →</a>
+    </div>
+
+    <div class="box">
+      <div class="symbol">✉</div>
+      <h3>Contact Us</h3>
+      <p>Get in touch with us.</p>
+      <a href="#contact">Contact →</a>
+    </div>
+
+    <div class="box">
+      <div class="symbol">⭐</div>
+      <h3>Special Content</h3>
+      <p>Discover exclusive featured content.</p>
+      <a href="#special">Explore →</a>
+    </div>
+
+    <div class="box">
+      <div class="symbol">✦</div>
+      <h3>Latest Updates</h3>
+      <p>Stay updated with our latest news.</p>
+      <a href="#updates">Read More →</a>
+    </div>
+
+    <div class="box">
+      <div class="symbol">◆</div>
+      <h3>Our Collection</h3>
+      <p>Discover our special collection.</p>
+      <a href="#collection">Explore →</a>
     </div>
 
   </div>
 </section>
 
-<section id="about">
-  <h2>ABOUT AZAN-OFFICIAL</h2>
-  <p>Welcome to my official website. Enjoy stories, adventures and entertainment!</p>
+<!-- ABOUT -->
+<section class="content-area" id="about">
+  <h2 class="section-title">♛ ABOUT SHAIKH SAHAB</h2>
+  <p class="about-text">
+    Welcome to SHAIKH SAHAB, a special place for stories,
+    entertainment, creativity and inspiration.
+    Explore our website and enjoy a beautiful experience
+    with a royal touch.
+  </p>
 </section>
 
+<!-- STORIES -->
+<section id="stories">
+  <h2 class="section-title">☪ ISLAMIC & FUNNY STORIES</h2>
+  <p class="section-subtitle">
+    Stories, entertainment and beautiful lessons.
+  </p>
+  <div class="about-text">
+    New stories and interesting content will be added here.
+    Stay connected!
+  </div>
+</section>
+
+<!-- VIDEOS -->
+<section class="content-area" id="videos">
+  <h2 class="section-title">▶ OUR VIDEOS</h2>
+  <p class="section-subtitle">
+    Watch our latest video collection.
+  </p>
+  <div class="about-text">
+    Our video collection will be updated soon.
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section id="gallery">
+  <h2 class="section-title">✦ ROYAL GALLERY</h2>
+  <p class="section-subtitle">Our special picture collection</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">👑</div>
+    <div class="gallery-item">🌙</div>
+    <div class="gallery-item">✨</div>
+    <div class="gallery-item">🏰</div>
+    <div class="gallery-item">⭐</div>
+    <div class="gallery-item">☪</div>
+  </div>
+</section>
+
+<!-- SPECIAL CONTENT -->
+<section class="content-area" id="special">
+  <h2 class="section-title">⭐ SPECIAL CONTENT</h2>
+  <p class="about-text">
+    Welcome to our special corner. More exciting content
+    will be added here.
+  </p>
+</section>
+
+<!-- UPDATES -->
+<section id="updates">
+  <h2 class="section-title">✦ LATEST UPDATES</h2>
+  <p class="about-text">
+    Keep visiting SHAIKH SAHAB for new updates and content.
+  </p>
+</section>
+
+<!-- COLLECTION -->
+<section class="content-area" id="collection">
+  <h2 class="section-title">◆ OUR COLLECTION</h2>
+  <p class="about-text">
+    Explore our growing collection of special content.
+  </p>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">✉ CONTACT US</h2>
+
+  <div class="contact-card">
+    <h3 style="color:#e8b94f;margin-bottom:15px;">
+      GET IN TOUCH
+    </h3>
+    <p>
+      Thank you for visiting SHAIKH SAHAB.
+      We appreciate your support.
+    </p>
+  </div>
+</section>
+
+<!-- FOOTER -->
 <footer>
-  © 2026 AZAN-OFFICIAL | All Rights Reserved
+  <div class="footer-name">♛ SHAIKH SAHAB ♛</div>
+
+  <div class="created">
+    CREATED BY AZAN
+  </div>
+
+  <p>May Allah Always Guide Us ♥</p>
+
+  <p>© 2026 SHAIKH SAHAB | All Rights Reserved</p>
 </footer>
+
+<script>
+function enterSite(){
+  document.getElementById("intro").classList.add("hide");
+}
+</script>
 
 </body>
 </html>
